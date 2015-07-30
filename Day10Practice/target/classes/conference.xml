@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id="sessionPlanner" class="com.msci.ex1.SessionPlanner">
+		<constructor-arg>
+			<map>
+				<entry key="Functional programming with Groovy" value="60"></entry>
+				<entry key="Scala Tricks" value="45"></entry>
+				<entry key="Spring unit testing" value="50"></entry>
+				<entry key="Unit testing JavaScript" value="50"></entry>
+				<entry key="Concurrency on the JVM" value="60"></entry>
+				<entry key="Grails for MVC" value="45"></entry>
+				<entry key="Server side JavaScript" value="50"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="conference" class="com.msci.ex1.Conference">
+		<property name="sessionPlanner" ref="sessionPlanner"></property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,37 @@
+<xs:schema xmlns:tns="http://msci.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://msci.com/" version="1.0">
+
+  <xs:element name="add" type="tns:add"/>
+
+  <xs:element name="addResponse" type="tns:addResponse"/>
+
+  <xs:element name="subtract" type="tns:subtract"/>
+
+  <xs:element name="subtractResponse" type="tns:subtractResponse"/>
+
+  <xs:complexType name="add">
+    <xs:sequence>
+      <xs:element name="a" type="xs:int"/>
+      <xs:element name="b" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subtract">
+    <xs:sequence>
+      <xs:element name="a" type="xs:int"/>
+      <xs:element name="b" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subtractResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
